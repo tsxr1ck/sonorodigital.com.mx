@@ -4,27 +4,33 @@ import { motion } from "framer-motion"
 import { useTranslations } from "next-intl"
 
 const technologies = [
-  { name: "React", logo: "⚛️" },
-  { name: "TypeScript", logo: "🔷" },
-  { name: "Next.js", logo: "▲" },
-  { name: "Node.js", logo: "💚" },
-  { name: "Python", logo: "🐍" },
-  { name: "Go", logo: "🔵" },
-  { name: "PostgreSQL", logo: "🐘" },
-  { name: "Docker", logo: "🐳" },
-  { name: "AWS", logo: "☁️" },
-  { name: "Kubernetes", logo: "☸️" },
-  { name: "Redis", logo: "🔴" },
-  { name: "GraphQL", logo: "◈" },
+  { name: "React", slug: "react" },
+  { name: "TypeScript", slug: "typescript" },
+  { name: "Next.js", slug: "nextdotjs" },
+  { name: "Node.js", slug: "nodedotjs" },
+  { name: "Python", slug: "python" },
+  { name: "Go", slug: "go" },
+  { name: "PostgreSQL", slug: "postgresql" },
+  { name: "Docker", slug: "docker" },
+  { name: "Kubernetes", slug: "kubernetes" },
+  { name: "Redis", slug: "redis" },
+  { name: "GraphQL", slug: "graphql" },
 ]
-
-const doubled = [...technologies, ...technologies]
 
 export function TechStack() {
   const t = useTranslations("techStack")
 
   return (
     <section id="tech-stack" className="py-20 overflow-hidden">
+      <style>{`
+        @keyframes infinite-scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
+        }
+        .animate-infinite-scroll {
+          animation: infinite-scroll 30s linear infinite;
+        }
+      `}</style>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-12 text-center">
         <motion.p
           initial={{ opacity: 0 }}
@@ -45,32 +51,37 @@ export function TechStack() {
         </motion.h2>
       </div>
 
-      <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-linear-to-r from-background to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-linear-to-l from-background to-transparent pointer-events-none" />
+      <div className="relative flex overflow-hidden">
+        <div className="absolute left-0 top-0 bottom-0 w-32 z-10 bg-linear-to-r from-background to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 z-10 bg-linear-to-l from-background to-transparent pointer-events-none" />
 
-        <motion.div
-          className="flex gap-8 px-8"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            x: { repeat: Infinity, duration: 30, ease: "linear" },
-          }}
-          whileHover={{ animationPlayState: "paused" }}
-        >
-          {doubled.map((tech, i) => (
-            <div
-              key={`${tech.name}-${i}`}
-              className="flex shrink-0 flex-col items-center gap-3 text-center"
+        <div className="group flex w-max">
+          {[0, 1].map((setIndex) => (
+            <div 
+              key={setIndex}
+              className="flex shrink-0 gap-12 px-6 animate-infinite-scroll group-hover:[animation-play-state:paused]"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-muted/50 border border-border/50 text-2xl grayscale hover:grayscale-0 transition-all duration-300">
-                {tech.logo}
-              </div>
-              <span className="text-label-sm text-muted-foreground">
-                {tech.name}
-              </span>
+              {technologies.map((tech) => (
+                <div
+                  key={tech.slug}
+                  className="flex shrink-0 flex-col items-center gap-3 text-center w-[120px]"
+                >
+                  <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-muted/50 border border-border/50 transition-all duration-300 overflow-hidden">
+                    <img 
+                      src={`https://cdn.simpleicons.org/${tech.slug}`} 
+                      alt={tech.name}
+                      className="w-8 h-8 grayscale hover:grayscale-0 transition-all duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                  <span className="text-label-sm text-muted-foreground">
+                    {tech.name}
+                  </span>
+                </div>
+              ))}
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )

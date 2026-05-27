@@ -17,7 +17,16 @@ export function Footer() {
 
   return (
     <footer className="relative border-t border-border">
-      <section className="py-24 lg:py-32">
+      <section id="contact" className="py-24 lg:py-32">
+      <style>{`
+        @keyframes infinite-scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
+        }
+        .animate-infinite-scroll {
+          animation: infinite-scroll 30s linear infinite;
+        }
+      `}</style>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             <motion.div
@@ -116,12 +125,12 @@ export function Footer() {
       </section>
 
       <div className="border-t border-border">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-center gap-4">
           <p className="text-label-sm text-muted-foreground">
             &copy; {year} {t("copyright")}
           </p>
 
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             {socialLinks.map((link) => (
               <a
                 key={link.label}
@@ -132,7 +141,7 @@ export function Footer() {
                 {link.icon}
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

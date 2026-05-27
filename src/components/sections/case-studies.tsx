@@ -103,10 +103,10 @@ export function CaseStudies() {
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-border/40 flex items-center text-label-md text-primary">
+                {/* <div className="mt-6 pt-4 border-t border-border/40 flex items-center text-label-md text-primary">
                   {t("readMore")}
                   <ArrowUpRight className="ml-1 h-4 w-4" />
-                </div>
+                </div> */}
               </TonalCard>
             </motion.div>
           ))}

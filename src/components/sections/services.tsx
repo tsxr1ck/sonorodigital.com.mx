@@ -1,38 +1,43 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Brain, Gauge, Shield, Workflow } from "lucide-react"
+import { Cloud, Cpu, Workflow, GitBranch, BarChart, Gauge } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { TonalCard } from "@/components/ui/tonal-card"
 
-const iconMap: Record<string, React.ReactNode> = {
-  architecture: <Workflow className="h-6 w-6" />,
-  performance: <Gauge className="h-6 w-6" />,
-  resilience: <Shield className="h-6 w-6" />,
-  ai: <Brain className="h-6 w-6" />,
+const iconMap: Record<number, React.ReactNode> = {
+  0: <Cloud className="h-6 w-6" />,
+  1: <Cpu className="h-6 w-6" />,
+  2: <Workflow className="h-6 w-6" />,
+  3: <GitBranch className="h-6 w-6" />,
+  4: <BarChart className="h-6 w-6" />,
+  5: <Gauge className="h-6 w-6" />,
 }
-
-const cells = [
-  { key: "architecture", span: "lg:col-span-2" },
-  { key: "performance", span: "lg:col-span-1" },
-  { key: "resilience", span: "lg:col-span-1" },
-  { key: "ai", span: "lg:col-span-2" },
-]
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.1 * i, type: "spring" as const, stiffness: 200, damping: 20 },
+    transition: { delay: 0.08 * i, type: "spring" as const, stiffness: 200, damping: 20 },
   }),
 }
 
-export function WhyUs() {
-  const t = useTranslations("whyUs")
+export function Services() {
+  const t = useTranslations("services")
+  const items = t.raw("items") as Array<{ title: string; desc: string }>
 
   return (
-    <section id="why-us" className="py-24 lg:py-32">
+    <section id="services" className="py-24 lg:py-32">
+      <style>{`
+        @keyframes infinite-scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
+        }
+        .animate-infinite-scroll {
+          animation: infinite-scroll 30s linear infinite;
+        }
+      `}</style>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,11 +58,10 @@ export function WhyUs() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-          {cells.map((cell, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+          {items.map((item, i) => (
             <motion.div
-              key={cell.key}
-              className={cell.span}
+              key={item.title}
               variants={itemVariants}
               initial="hidden"
               whileInView="visible"
@@ -65,9 +69,9 @@ export function WhyUs() {
               custom={i}
             >
               <TonalCard
-                icon={iconMap[cell.key]}
-                title={t(`${cell.key}.title` as Parameters<typeof t>[0])}
-                description={t(`${cell.key}.desc` as Parameters<typeof t>[0])}
+                icon={iconMap[i]}
+                title={item.title}
+                description={item.desc}
                 className="h-full"
               />
             </motion.div>

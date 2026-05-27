@@ -10,31 +10,63 @@
   },
   "hero": {
     "tagline": "Arquitectura SaaS & Ingeniería",
-    "headline1": "Creamos",
-    "headline2": "SaaS escalables",
-    "headline3": "que se lanzan.",
-    "description": "Sonoro Digital diseña y construye plataformas cloud de alto rendimiento, sistemas de orquestación de IA y arquitecturas resilientes para equipos de producto ambiciosos.",
+    "headline1": "Construimos",
+    "headline2": "plataformas SaaS",
+    "headline3": "listas para escalar.",
+    "description": "Sonoro Digital diseña y desarrolla plataformas cloud de alto rendimiento, sistemas de orquestación de IA y arquitecturas resilientes para equipos ambiciosos.",
     "cta": "Agenda una Consultoría",
     "secondary": "Ver Nuestro Trabajo"
   },
+  "services": {
+    "tagline": "Lo Que Construimos",
+    "headline1": "Ingeniería SaaS completa,",
+    "headline2": "del prototipo a escala.",
+    "description": "No solo escribimos código — diseñamos y entregamos plataformas SaaS completas, sistemas de IA y arquitecturas cloud que manejan tráfico real.",
+    "items": [
+      {
+        "title": "Desarrollo SaaS a Medida",
+        "desc": "Productos SaaS completos sobre stacks modernos. Arquitectura multi-tenant, integración de pagos y UX pulida desde el primer día."
+      },
+      {
+        "title": "Arquitectura Cloud",
+        "desc": "Infraestructura en AWS, GCP o Azure diseñada para resiliencia. Auto-escalado, despliegue multi-región y planificación de recursos optimizada."
+      },
+      {
+        "title": "Orquestación de IA & LLMs",
+        "desc": "Funcionalidades de IA listas para producción — enrutamiento de modelos, pipelines RAG, flujos de agentes y búsqueda vectorial con observabilidad."
+      },
+      {
+        "title": "APIs & Microservicios",
+        "desc": "APIs REST, GraphQL y gRPC diseñadas para experiencia de desarrollo. Microservicios basados en eventos con colas de mensajes y procesamiento idempotente."
+      },
+      {
+        "title": "DevOps & CI/CD",
+        "desc": "Flujos GitOps, infraestructura como código, pipelines de pruebas automatizadas y estrategias de despliegue sin downtime."
+      },
+      {
+        "title": "Auditorías de Rendimiento",
+        "desc": "Análisis profundo de tu stack actual. Optimización de consultas, estrategias de caché, análisis de bundles y pruebas de carga para multiplicar throughput por 10x."
+      }
+    ]
+  },
   "whyUs": {
     "tagline": "Por Qué Sonoro Digital",
-    "headline1": "Construido diferente,",
-    "headline2": "construido para durar.",
+    "headline1": "Arquitectura robusta,",
+    "headline2": "rendimiento excepcional.",
     "description": "Nuestra filosofía de ingeniería combina pensamiento arquitectónico profundo con ejecución pragmática. Esto es lo que nos diferencia.",
     "architecture": { "title": "Diseño Arquitectura-Primero", "desc": "Diseñamos sistemas desde el modelo de datos hacia arriba. Cada SaaS que construimos comienza con una arquitectura limpia basada en eventos que escala de cero a millones sin reescrituras." },
     "performance": { "title": "Obsesión por el Rendimiento", "desc": "Respuestas API en menos de 100ms. Puntuaciones Lighthouse superiores a 95. Core Web Vitals que convierten. Tratamos el rendimiento como una característica, no como una idea tardía." },
     "resilience": { "title": "Resiliencia por Defecto", "desc": "Circuit breakers, degradación elegante y failover multi-región integrados en cada capa. Tu plataforma permanece en línea cuando más importa." },
-    "ai": { "title": "Ingeniería Nativa de IA", "desc": "Orquestamos LLMs, bases de datos vectoriales y flujos de agentes en características listas para producción. No demos — sistemas desplegados generando valor real." }
+    "ai": { "title": "Ingeniería Nativa de IA", "desc": "Orquestamos LLMs, bases de datos vectoriales y flujos de agentes en entornos de producción. No hacemos pruebas de concepto — desplegamos sistemas que generan valor real." }
   },
   "techStack": {
     "tagline": "Tecnologías que Dominamos",
     "headline": "Agnósticos de stack. Enfoque profundo."
   },
   "caseStudies": {
-    "tagline": "Casos de Estudio",
-    "headline1": "Problemas que hemos resuelto,",
-    "headline2": "a escala.",
+    "tagline": "Casos de Éxito",
+    "headline1": "Sistemas complejos,",
+    "headline2": "soluciones a escala.",
     "description": "Arquitecturas reales, impacto real. Aquí algunos sistemas complejos que hemos diseñado y entregado.",
     "problem": "Problema",
     "solution": "Solución",
@@ -66,11 +98,11 @@
   },
   "footer": {
     "tagline": "Construyamos Algo",
-    "headline1": "¿Listo para lanzar tu",
-    "headline2": "próximo SaaS?",
+    "headline1": "¿Listo para escalar tu",
+    "headline2": "próximo producto SaaS?",
     "description": "Agenda una consultoría gratuita de 30 minutos. Discutiremos tu arquitectura, identificaremos cuellos de botella y trazaremos un roadmap.",
     "location": "Remoto-first, sirviendo equipos en todo el mundo",
-    "email": "hola@sonorodigital.com",
+    "email": "hello@sonorodigital.com.mx",
     "nameLabel": "Nombre",
     "namePlaceholder": "Tu nombre",
     "emailLabel": "Correo",

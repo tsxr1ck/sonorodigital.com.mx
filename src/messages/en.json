@@ -4,38 +4,82 @@
     "caseStudies": "Case Studies",
     "stack": "Stack",
     "whyUs": "Why Us",
-    "cta": "Book a Discovery Call",
+    "cta": "Schedule a Strategy Call",
     "closeMenu": "Close menu",
     "openMenu": "Open menu"
   },
   "hero": {
     "tagline": "SaaS Architecture & Engineering",
-    "headline1": "We engineer",
-    "headline2": "scalable SaaS",
-    "headline3": "products that ship.",
+    "headline1": "We build",
+    "headline2": "SaaS that scales",
+    "headline3": "and platforms that perform.",
     "description": "Sonoro Digital designs and builds high-performance cloud platforms, AI orchestration systems, and resilient architectures for ambitious product teams.",
     "cta": "Book a Discovery Call",
-    "secondary": "View Our Work"
+    "secondary": "See Our Work"
+  },
+  "services": {
+    "tagline": "What We Build",
+    "headline1": "Full-stack SaaS engineering,",
+    "headline2": "from zero to scale.",
+    "description": "We don't just write code — we design and deliver complete SaaS platforms, AI systems, and cloud architectures that handle real traffic.",
+    "items": [
+      {
+        "title": "Custom SaaS Development",
+        "desc": "End-to-end SaaS products built on modern stacks. Multi-tenant architecture, billing integration, and polished UX from day one."
+      },
+      {
+        "title": "Cloud Architecture",
+        "desc": "AWS, GCP, or Azure infrastructure designed for resilience. Auto-scaling, multi-region deployment, and cost-optimized resource planning."
+      },
+      {
+        "title": "AI & LLM Orchestration",
+        "desc": "Production-grade AI features — model routing, RAG pipelines, agent workflows, and vector search — deployed with observability and fallbacks."
+      },
+      {
+        "title": "API Design & Microservices",
+        "desc": "REST, GraphQL, and gRPC APIs designed for developer experience. Event-driven microservices with message queues and idempotent processing."
+      },
+      {
+        "title": "DevOps & CI/CD",
+        "desc": "GitOps workflows, infrastructure-as-code, automated testing pipelines, and zero-downtime deployment strategies."
+      },
+      {
+        "title": "Performance Audits",
+        "desc": "Deep-dive analysis of your existing stack. Database query optimization, caching strategies, bundle analysis, and load testing to 10x throughput."
+      }
+    ]
   },
   "whyUs": {
     "tagline": "Why Sonoro Digital",
-    "headline1": "Built different,",
-    "headline2": "built to last.",
-    "description": "Our engineering philosophy combines deep architectural thinking with pragmatic execution. Here's what sets us apart.",
-    "architecture": { "title": "Architecture-First Design", "desc": "We design systems from the data model up. Every SaaS product we build starts with a clean, event-driven architecture that scales from zero to millions of users without rewrites." },
-    "performance": { "title": "Performance Obsession", "desc": "Sub-100ms API responses. Lighthouse scores above 95. Core Web Vitals that convert. We treat performance as a feature, not an afterthought." },
-    "resilience": { "title": "Resilience by Default", "desc": "Circuit breakers, graceful degradation, and multi-region failover built into every layer. Your platform stays online when it matters most." },
-    "ai": { "title": "AI-Native Engineering", "desc": "We orchestrate LLMs, vector databases, and agent workflows into production-grade features. Not demos — deployed systems generating real value." }
+    "headline1": "Engineered for scale,",
+    "headline2": "designed for impact.",
+    "description": "Our engineering philosophy pairs deep architectural thinking with pragmatic execution. Here is what sets us apart.",
+    "architecture": {
+      "title": "Architecture-First Thinking",
+      "desc": "We design systems from the data model up. Every SaaS product we build starts with a clean, event-driven architecture that scales from zero to millions of users without rewrites."
+    },
+    "performance": {
+      "title": "Performance Obsession",
+      "desc": "Sub-100ms API responses. Lighthouse scores above 95. Core Web Vitals that convert. We treat performance as a feature, not an afterthought."
+    },
+    "resilience": {
+      "title": "Resilience by Default",
+      "desc": "Circuit breakers, graceful degradation, and multi-region failover are built into every layer. Your platform stays online when it matters most."
+    },
+    "ai": {
+      "title": "AI-Native Engineering",
+      "desc": "We orchestrate LLMs, vector databases, and agent workflows into production-grade features. Not demos — deployed systems generating real value."
+    }
   },
   "techStack": {
     "tagline": "Technologies We Master",
-    "headline": "Stack-agnostic. Depth-first."
+    "headline": "Technology agnostic. Execution obsessed."
   },
   "caseStudies": {
     "tagline": "Case Studies",
-    "headline1": "Problems we've solved,",
+    "headline1": "Problems we have solved,",
     "headline2": "at scale.",
-    "description": "Real architectures, real impact. Here are a few complex systems we've designed and delivered.",
+    "description": "Real architectures, real impact. Here are a few complex systems we have designed and delivered.",
     "problem": "Problem",
     "solution": "Solution",
     "result": "Result",
@@ -43,21 +87,33 @@
     "items": [
       {
         "title": "Multi-Tenant SaaS Platform",
-        "tags": ["Architecture", "PostgreSQL", "Node.js"],
+        "tags": [
+          "Architecture",
+          "PostgreSQL",
+          "Node.js"
+        ],
         "problem": "A growing startup needed to migrate from a single-tenant monolith to a multi-tenant architecture capable of serving 10,000+ organizations.",
         "solution": "Designed an event-driven, database-per-tenant architecture with shared schema primitives and automated tenant provisioning.",
         "result": "Zero-downtime migration. 40x improvement in query performance. Ready for 100K+ tenants."
       },
       {
         "title": "Real-Time Analytics Pipeline",
-        "tags": ["Data Engineering", "Python", "Redis"],
+        "tags": [
+          "Data Engineering",
+          "Python",
+          "Redis"
+        ],
         "problem": "A fintech firm had 15-minute stale dashboards. Their batch ETL couldn't keep up with streaming transaction data.",
         "solution": "Built a streaming pipeline with Redis Streams, ClickHouse for OLAP, and websocket-driven live dashboards.",
         "result": "Sub-second dashboard refresh. 200x faster than batch processing. 99.9% data freshness SLA."
       },
       {
         "title": "AI Orchestration Layer",
-        "tags": ["AI/ML", "TypeScript", "Go"],
+        "tags": [
+          "AI/ML",
+          "TypeScript",
+          "Go"
+        ],
         "problem": "A product team wanted to embed AI agents into their workflow tool but had no infrastructure for LLM routing, retries, or observability.",
         "solution": "Built an AI gateway with model fallback, prompt versioning, cost tracking, and a vector-store-backed knowledge base.",
         "result": "15ms p99 latency. 99.7% uptime. 3 AI agents deployed to production in 6 weeks."
@@ -65,12 +121,12 @@
     ]
   },
   "footer": {
-    "tagline": "Let's Build Something",
-    "headline1": "Ready to ship your",
-    "headline2": "next SaaS?",
-    "description": "Book a free 30-minute discovery call. We'll discuss your architecture, identify bottlenecks, and outline a roadmap.",
+    "tagline": "Let's build something",
+    "headline1": "Ready to scale your",
+    "headline2": "next SaaS product?",
+    "description": "Book a free 30-minute strategy call. We will discuss your architecture, identify bottlenecks, and outline a roadmap.",
     "location": "Remote-first, serving teams worldwide",
-    "email": "hello@sonorodigital.com",
+    "email": "hello@sonorodigital.com.mx",
     "nameLabel": "Name",
     "namePlaceholder": "Your name",
     "emailLabel": "Email",

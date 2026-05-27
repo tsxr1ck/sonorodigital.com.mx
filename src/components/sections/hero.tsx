@@ -84,8 +84,11 @@ export function Hero() {
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring" as const, stiffness: 200, damping: 20, delay: 0.1 }}
+            animate={{ opacity: 1, y: [0, -8, 0] }}
+            transition={{ 
+              opacity: { duration: 0.5, delay: 0.1 },
+              y: { repeat: Infinity, duration: 6, ease: "easeInOut" } 
+            }}
             className="relative"
           >
             <div className="rounded-2xl border border-border bg-card/80 backdrop-blur-md overflow-hidden shadow-elevation-3">

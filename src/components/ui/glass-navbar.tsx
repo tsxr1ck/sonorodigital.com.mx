@@ -68,8 +68,8 @@ export function GlassNavbar() {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          "backdrop-blur-lg bg-background/70 border-b",
-          scrolled ? "border-border/60 shadow-elevation-2" : "border-transparent",
+          "backdrop-blur-lg border-b",
+          scrolled ? "bg-background/70 border-border/60 shadow-elevation-2" : "bg-transparent border-transparent",
         )}
       >
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -91,10 +91,10 @@ export function GlassNavbar() {
             {navLinks.map((key) => (
               <a
                 key={key}
-                href={`#${key === "whyUs" ? "why-us" : key === "caseStudies" ? "case-studies" : key === "stack" ? "tech-stack" : "#services"}`}
+                href={`#${key === "whyUs" ? "why-us" : key === "caseStudies" ? "case-studies" : key === "stack" ? "tech-stack" : "services"}`}
                 onClick={(e) => {
                   e.preventDefault()
-                  handleNavClick(`#${key === "whyUs" ? "why-us" : key === "caseStudies" ? "case-studies" : key === "stack" ? "tech-stack" : "#services"}`)
+                  handleNavClick(`#${key === "whyUs" ? "why-us" : key === "caseStudies" ? "case-studies" : key === "stack" ? "tech-stack" : "services"}`)
                 }}
                 className="text-label-md text-foreground/70 hover:text-foreground transition-colors"
               >
@@ -187,7 +187,9 @@ export function GlassNavbar() {
                   className="pt-4"
                 >
                   <FluidButton size="md" variant="primary" className="w-full">
+                    <button onClick={() => { handleNavClick('#contact') }}>
                     {t("cta")}
+                    </button>
                   </FluidButton>
                 </motion.div>
               </div>
