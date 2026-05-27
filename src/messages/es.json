@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "caseStudies": "Casos de Estudio",
+    "stack": "Stack",
+    "whyUs": "Por Qué Nosotros",
+    "cta": "Agenda una Consultoría",
+    "closeMenu": "Cerrar menú",
+    "openMenu": "Abrir menú"
+  },
+  "hero": {
+    "tagline": "Arquitectura SaaS & Ingeniería",
+    "headline1": "Creamos",
+    "headline2": "SaaS escalables",
+    "headline3": "que se lanzan.",
+    "description": "Sonoro Digital diseña y construye plataformas cloud de alto rendimiento, sistemas de orquestación de IA y arquitecturas resilientes para equipos de producto ambiciosos.",
+    "cta": "Agenda una Consultoría",
+    "secondary": "Ver Nuestro Trabajo"
+  },
+  "whyUs": {
+    "tagline": "Por Qué Sonoro Digital",
+    "headline1": "Construido diferente,",
+    "headline2": "construido para durar.",
+    "description": "Nuestra filosofía de ingeniería combina pensamiento arquitectónico profundo con ejecución pragmática. Esto es lo que nos diferencia.",
+    "architecture": { "title": "Diseño Arquitectura-Primero", "desc": "Diseñamos sistemas desde el modelo de datos hacia arriba. Cada SaaS que construimos comienza con una arquitectura limpia basada en eventos que escala de cero a millones sin reescrituras." },
+    "performance": { "title": "Obsesión por el Rendimiento", "desc": "Respuestas API en menos de 100ms. Puntuaciones Lighthouse superiores a 95. Core Web Vitals que convierten. Tratamos el rendimiento como una característica, no como una idea tardía." },
+    "resilience": { "title": "Resiliencia por Defecto", "desc": "Circuit breakers, degradación elegante y failover multi-región integrados en cada capa. Tu plataforma permanece en línea cuando más importa." },
+    "ai": { "title": "Ingeniería Nativa de IA", "desc": "Orquestamos LLMs, bases de datos vectoriales y flujos de agentes en características listas para producción. No demos — sistemas desplegados generando valor real." }
+  },
+  "techStack": {
+    "tagline": "Tecnologías que Dominamos",
+    "headline": "Agnósticos de stack. Enfoque profundo."
+  },
+  "caseStudies": {
+    "tagline": "Casos de Estudio",
+    "headline1": "Problemas que hemos resuelto,",
+    "headline2": "a escala.",
+    "description": "Arquitecturas reales, impacto real. Aquí algunos sistemas complejos que hemos diseñado y entregado.",
+    "problem": "Problema",
+    "solution": "Solución",
+    "result": "Resultado",
+    "readMore": "Leer el caso completo",
+    "items": [
+      {
+        "title": "Plataforma SaaS Multi-Tenant",
+        "tags": ["Arquitectura", "PostgreSQL", "Node.js"],
+        "problem": "Una startup en crecimiento necesitaba migrar de un monolito single-tenant a una arquitectura multi-tenant capaz de servir a más de 10,000 organizaciones.",
+        "solution": "Diseñamos una arquitectura basada en eventos, con base de datos por tenant, primitivas de esquema compartidas y aprovisionamiento automatizado de tenants.",
+        "result": "Migración sin downtime. Mejora de 40x en rendimiento de consultas. Listo para más de 100K tenants."
+      },
+      {
+        "title": "Pipeline de Analíticas en Tiempo Real",
+        "tags": ["Ingeniería de Datos", "Python", "Redis"],
+        "problem": "Una empresa fintech tenía dashboards con 15 minutos de retraso. Su ETL batch no podía seguir el ritmo de los datos de transacciones en streaming.",
+        "solution": "Construimos un pipeline de streaming con Redis Streams, ClickHouse para OLAP y dashboards en vivo vía websockets.",
+        "result": "Actualización de dashboard sub-segundo. 200x más rápido que el procesamiento batch. SLA de frescura de datos del 99.9%."
+      },
+      {
+        "title": "Capa de Orquestación de IA",
+        "tags": ["IA/ML", "TypeScript", "Go"],
+        "problem": "Un equipo de producto quería integrar agentes de IA en su herramienta de flujo de trabajo pero no tenía infraestructura para enrutamiento de LLM, reintentos ni observabilidad.",
+        "solution": "Construimos un gateway de IA con fallback de modelos, versionado de prompts, seguimiento de costos y una base de conocimiento respaldada por vector store.",
+        "result": "Latencia p99 de 15ms. 99.7% de disponibilidad. 3 agentes de IA en producción en 6 semanas."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Construyamos Algo",
+    "headline1": "¿Listo para lanzar tu",
+    "headline2": "próximo SaaS?",
+    "description": "Agenda una consultoría gratuita de 30 minutos. Discutiremos tu arquitectura, identificaremos cuellos de botella y trazaremos un roadmap.",
+    "location": "Remoto-first, sirviendo equipos en todo el mundo",
+    "email": "hola@sonorodigital.com",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Correo",
+    "emailPlaceholder": "tu@empresa.com",
+    "messageLabel": "¿Qué estás construyendo?",
+    "messagePlaceholder": "Cuéntanos sobre tu proyecto, stack y objetivos...",
+    "send": "Enviar Mensaje",
+    "copyright": "Sonoro Digital. Todos los derechos reservados."
+  }
+}
